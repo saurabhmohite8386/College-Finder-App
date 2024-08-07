@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="logo.jpg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College_Predictor_login</title>
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  form {
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+  }
+
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  input[type=phone],
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+
+  button {
+    background-color: #f8bc06;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .cancelbtn {
+    width: auto;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  img.avatar {
+    width: 30%;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw a {
+    float: right;
+    padding-top: 16px;
+    color: white;
+  }
+
+  span.psw a:hover {
+    color: skyblue;
+    opacity: 1;
+
+
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+  .banner {
+
+    width: 100%;
+    height: 120vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+  }
+
+  label {
+    color: white;
+    margin-left: 20px;
+  }
+
+  /* .banner h3{
+    text-align: center;
+
+} */
+  .banner1 {
+    width: 40%;
+    position: absolute;
+    top: 50px;
+  }
+</style>
+
+<body>
+  <div class="banner">
+    <h3>Log In / Register</h3>
+    <div class="banner1">
+      <form id="signinform" action="/signup" method="post">
+        <div class="imgcontainer">
+          <img src="images/lusername.png " alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Email Id</b></label>
+          <input type="email" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Create Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+          <label for="psw"><b>Re-Enter Password</b></label>
+          <input type="password" placeholder="Renter Password" name="confirmpassword" required>
+
+          <label id="mobile" for="phone"><b>Mobile No</b></label>
+          <input type="text" placeholder="Enter Mobile No" name="phone" id="phone" required>
+
+          <button type="submit">Sign Up</button>
+        </div>
+
+        <div class="container">
+          <a href="/login"><button type="button" class="cancelbtn">Cancel</button></a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
+<script>
+  const phoneInput = document.getElementById('phone');
+  const phonePattern = /^\d{10}$/;
+
+  phoneInput.addEventListener('input', function () {
+    const phoneNumber = this.value.trim();
+    if (!phonePattern.test(phoneNumber)) {
+      this.setCustomValidity('Please enter a valid 10-digit mobile number');
+    } else {
+      this.setCustomValidity('');
+    }
+  });
+
+  const passwordInput = document.getElementById('password');
+
+passwordInput.addEventListener('input', function () {
+  const password = this.value.trim();
+  if (password.length < 5) {
+    this.setCustomValidity('Password must be at least 5 characters long');
+  } else {
+    this.setCustomValidity('');
+  }
+});
+
+</script>
+
+</html>

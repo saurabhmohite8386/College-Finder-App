@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>contact us page</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins',sans-serif;
+}
+
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #222;
+}
+
+.contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact .content p
+{
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.container .contactinfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+   
+.container .contactinfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}   
+
+.container .contactinfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    transition: 0.1s;
+}
+
+.container .contactinfo .box:hover .icon
+{
+    background: #00bcd4;
+    color: #fff;
+}
+
+.container .contactinfo .box .text
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .contactinfo .box .text h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.container .contactinfo .txt
+{
+    color: #fff;
+    margin-top: 50px;
+    font-weight: 300;
+    padding-left: 10px;
+    border-left: 50px solid #e91e63;
+    line-height: 1em;
+}
+
+.sci
+{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.sci li
+{
+    list-style: none;
+}
+
+.sci li a
+{
+    color: #fff;
+    font-size: 2em;
+    transition: 0.1s;
+}
+
+.sci li a:hover
+{
+    color: #00bcd4;
+}
+
+.container .contactform
+{
+    position: relative;
+    width: 40%;
+    background: #fff;
+    min-height: 100px;
+    padding: 60px;
+}
+
+.container .contactform h2
+{
+    font-size: 2em;
+    color: #333;
+    font-weight: 700;
+}
+
+.container .contactform .inputbox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container .contactform .inputbox input,
+.container .contactform .inputbox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.container .contactform .inputbox span
+{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0; 
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666;
+    transition: 0.1s;
+}
+
+.container .contactform .inputbox input:focus ~ span,
+.container .contactform .inputbox textarea:focus ~ span,
+.container .contactform .inputbox input:valid ~ span,
+.container .contactform .inputbox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 0.9em;
+    transform: translateY(-20px);
+}
+
+.container .contactform .inputbox input[type="submit"]
+{
+    width: 80px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+    </style>
+    <body>
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Email us with any questions or inquiries.We would be happy to answer your questions.</p>
+            </div>
+            <div class="container">
+                <div class="contactinfo">
+                    <div class="box">
+                        <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>411035 Akurdi,pimpri-chinchwad,<br>Maharashtra,India</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>832-932-6497</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>collegepredictor123@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <h2 class="txt">Connect with us</h2>
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+                
+                <div class="contactform">
+                    <form action="/contactus" method="post">
+                        <h2>Send Message</h2>
+                        <div class="inputbox">
+                            <input type="text" name="Name" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="email" name="Email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputbox">
+                            <textarea type="text" name="Message" required="required"></textarea>
+                            <span>Type your Message...</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="submit" >
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
+            
